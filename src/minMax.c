@@ -73,7 +73,7 @@ void minMax(int *vetor, int n){
 		menor = min(menor_linha,menor);
 
 	/*  Custo: 4 Comparacoes.
-	    Pode ser otimizado para 3 Comparações.
+	    Pode ser otimizado para 2 Comparações.
 	*/
 
 	}
