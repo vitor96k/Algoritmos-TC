@@ -33,11 +33,11 @@ int min(int a, int b){
 
 // Acha o maior e menor valor de um vetor.
 // T(n) = T(n-2) + 0 + 4
-void minMax(int *vetor, int f){
+void minMax(int *vetor, int n){
 
 	// Caso Base T(2)
 	// Custo: 1 Comparação
-	if(f == 1){
+	if(n == 1){
 		if(vetor[0] >= vetor[1]){
 			maior = vetor[0];
 			menor = vetor[1];
@@ -49,7 +49,7 @@ void minMax(int *vetor, int f){
 
 	// Caso Base T(1)
 	// Custo: 0 Comparações
-	else if(f == 0){
+	else if(n == 0){
 		maior = vetor[0];
 		menor = vetor[0];
 	}
@@ -57,7 +57,7 @@ void minMax(int *vetor, int f){
 	else{
 
 		// Hipótese de Indução		
-		minMax(vetor,f-2);
+		minMax(vetor,n-2);
 
 		/* Paso de Indução:
 			Assumimos que ja temos o maior e menor
@@ -66,8 +66,8 @@ void minMax(int *vetor, int f){
 			estavam no conjunto.
 		*/
 
-		maior_linha = max(vetor[f],vetor[f-1]);
-		menor_linha = min(vetor[f],vetor[f-1]);		
+		maior_linha = max(vetor[n],vetor[n-1]);
+		menor_linha = min(vetor[n],vetor[n-1]);		
 
 		maior = max(maior_linha,maior);
 		menor = min(menor_linha,menor);
@@ -81,9 +81,9 @@ void minMax(int *vetor, int f){
 
 int main(){
 
-	int vetor[5] = {6,5,3,8,2};
+	int vetor[9] = {6,5,3,8,2,8,5,0,12};
 
-	minMax(&vetor[0],4);
+	minMax(&vetor[0],8);
 
 	printf("Min: %d - Max: %d",menor,maior);
 
