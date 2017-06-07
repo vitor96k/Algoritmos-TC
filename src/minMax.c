@@ -3,7 +3,7 @@
 
 	Código para estudar recursão e analisar:
 	Base de Indução,
-	Hipótese Forte,
+	Hipótese Fraca,
 	Passo de Indução,
 	Forma da Recorrencia.
 
