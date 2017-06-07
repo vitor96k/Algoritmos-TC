@@ -40,7 +40,7 @@ void minMax(int *vetor, int f){
 	if(f == 1){
 		if(vetor[0] >= vetor[1]){
 			maior = vetor[0];
-			maior = vetor[1];
+			menor = vetor[1];
 		}else{
 			maior = vetor[1];
 			menor = vetor[0];
